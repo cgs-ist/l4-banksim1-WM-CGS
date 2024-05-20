@@ -14,13 +14,45 @@ while True:
     print('Press q to quit')
     
     action = input("What do you want to do? ")
-    action = action.lower() #
-    action = action[0]
+    action = action.lower() #lowercasing letters
+    action = action[0] #getting the first thing entered i.e ( if "withdraw" is entered, only "w" will go thru)
     
-    if action == 'b':
+    if action == 'b': #double equal is a comparitor, single equal is an assignment
         print('Get Balance:')
         userPassword = input('Please enter your password: ')
-        if userPassword != accountPassword:
+        if userPassword != accountPassword: #comparitor that checks if something does NOT equal
             print('Incorrect Password')
         else:
             print('Your balance is: ', accountBalance)
+
+    if action == 'w':
+        print('Withdraw:')
+        userPassword = input('Please enter your password: ')
+        if userPassword != accountPassword: #comparitor that checks if something does NOT equal
+            print('Incorrect Password')
+        else:
+            temp = int(input('How much would you like to withdraw? '))
+            accountBalance = accountBalance - temp
+            print('Your balance is: ', accountBalance)
+
+    if action == 'd':
+        print('Deposit:')
+        userPassword = input('Please enter your password: ')
+        if userPassword != accountPassword: #comparitor that checks if something does NOT equal
+            print('Incorrect Password')
+        else:
+            temp = int(input('How much would you like to Deposit? '))
+            accountBalance = accountBalance + temp
+            print('Your balance is: ', accountBalance)
+        
+    if action == 's':
+        print('Show Account:')
+        userPassword = input('Please enter your password: ')
+        if userPassword != accountPassword: #comparitor that checks if something does NOT equal
+            print('Incorrect Password')
+        else:
+            print('Your balance is: ', accountBalance, '|', 'Under the name of: ', accountName, '|', 'With the password of: ', accountPassword)
+
+    if action == 'q':
+        print('Have a nice day :)')
+        break
