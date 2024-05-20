@@ -25,27 +25,27 @@ while True:
         else:
             print('Your balance is: ', accountBalance)
 
-    if action == 'w':
+    elif action == 'w':
         print('Withdraw:')
         userPassword = input('Please enter your password: ')
         if userPassword != accountPassword: #comparitor that checks if something does NOT equal
             print('Incorrect Password')
         else:
-            temp = int(input('How much would you like to withdraw? '))
+            temp = float(input('How much would you like to withdraw? '))
             accountBalance = accountBalance - temp
             print('Your balance is: ', accountBalance)
 
-    if action == 'd':
+    elif action == 'd':
         print('Deposit:')
         userPassword = input('Please enter your password: ')
         if userPassword != accountPassword: #comparitor that checks if something does NOT equal
             print('Incorrect Password')
         else:
-            temp = int(input('How much would you like to Deposit? '))
+            temp = float(input('How much would you like to Deposit? '))
             accountBalance = accountBalance + temp
             print('Your balance is: ', accountBalance)
         
-    if action == 's':
+    elif action == 's':
         print('Show Account:')
         userPassword = input('Please enter your password: ')
         if userPassword != accountPassword: #comparitor that checks if something does NOT equal
@@ -53,6 +53,9 @@ while True:
         else:
             print('Your balance is: ', accountBalance, '|', 'Under the name of: ', accountName, '|', 'With the password of: ', accountPassword)
 
-    if action == 'q':
+    elif action == 'q':
         print('Have a nice day :)')
         break
+
+    else:
+        print("please input an executable action")
