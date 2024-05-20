@@ -1,6 +1,8 @@
 # Non OOP
 # Bank Version 1
 # Single Account
+from PIL import Image
+img = Image.open("dog.png")
 
 accountName = 'Joe'
 accountBalance = 100
@@ -55,6 +57,7 @@ while True:
 
     elif action == 'q':
         print('Have a nice day :)')
+        img.show()
         break
 
     else:
