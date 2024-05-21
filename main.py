@@ -2,7 +2,7 @@
 # Bank Version 1
 # Single Account
 from PIL import Image
-img = Image.open("dog.png")
+img = Image.open("assets/dog.png")
 
 accountName = 'Joe'
 accountBalance = 100
